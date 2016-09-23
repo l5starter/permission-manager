@@ -3,7 +3,6 @@
 namespace L5Starter\PermissionManager;
 
 use Illuminate\Support\ServiceProvider;
-use Spatie\Permission\PermissionServiceProvider;
 
 class PermissionManagerServiceProvider extends ServiceProvider
 {
@@ -31,6 +30,6 @@ class PermissionManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(PermissionServiceProvider::class);
+        //
     }
 }
