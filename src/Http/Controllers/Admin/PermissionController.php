@@ -2,12 +2,10 @@
 
 namespace L5Starter\PermissionManager\Http\Controllers\Admin;
 
-use App\Http\Requests;
 use L5Starter\PermissionManager\Http\Requests\CreatePermissionRequest;
 use L5Starter\PermissionManager\Http\Requests\UpdatePermissionRequest;
 use L5Starter\PermissionManager\Repositories\PermissionRepository;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Flash;
 use L5Starter\PermissionManager\Repositories\RoleRepository;
 use Response;

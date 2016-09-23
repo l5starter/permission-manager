@@ -14,12 +14,12 @@ class PermissionManagerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (!$this->app->routesAreCached()) {
-            require __DIR__ . '/Http/routes.php';
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'/Http/routes.php';
         }
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/admin/permissions', 'permissions');
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/admin/roles', 'roles');
+        $this->loadViewsFrom(__DIR__.'/../resources/views/admin/permissions', 'permissions');
+        $this->loadViewsFrom(__DIR__.'/../resources/views/admin/roles', 'roles');
         // Publishing File
         $this->publishes([__DIR__.'/../database/seeds/' => database_path('seeds')], 'seeder');
     }

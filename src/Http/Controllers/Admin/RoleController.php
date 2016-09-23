@@ -3,8 +3,6 @@
 namespace L5Starter\PermissionManager\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use Illuminate\Http\Request;
 use L5Starter\PermissionManager\Http\Requests\CreateRoleRequest;
 use L5Starter\PermissionManager\Http\Requests\UpdateRoleRequest;
 use L5Starter\PermissionManager\Repositories\PermissionRepository;
