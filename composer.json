@@ -1,0 +1,24 @@
+{
+    "name": "l5starter/permission-manager",
+    "description": "Laravel 5 Start, Package permission manager",
+    "keywords": ["laravel", "starter", "permission", "acl"],
+    "type": "laravel-package",
+    "license": "MIT",
+    "homepage": "http://www.srisattha.com",
+    "authors": [
+        {
+            "name": "Wiwat Srisattha",
+            "email": "wiwat_srt@hotmail.com"
+        }
+    ],
+    "require": {
+        "l5starter/core": "5.2.x-dev",
+        "spatie/laravel-permission": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "L5Starter\\PermissionManager\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
