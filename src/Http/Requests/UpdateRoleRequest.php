@@ -2,9 +2,9 @@
 
 namespace L5Starter\PermissionManager\Http\Requests;
 
-use App\Http\Requests\Request;
+use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateRoleRequest extends Request
+class UpdateRoleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
