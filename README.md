@@ -54,3 +54,50 @@ Add menu in `resources/views/vendor/l5starter/admin/partials/sidebar.blade.php`
     </a>
 </li>
 ```
+
+## Using a middleware
+The package doesn't contain a middleware to check permissions but it's very trivial to add this yourself.
+
+``` bash
+$ php artisan make:middleware RoleMiddleware
+```
+
+This will create a RoleMiddleware for you, where you can handle your role check.
+```php
+// app/Http/Middleware/RoleMiddleware.php
+use Auth;
+
+...
+
+public function handle($request, Closure $next, $role)
+{
+    if (Auth::guest()) {
+        return redirect($urlOfYourLoginPage);
+    }
+
+    if (! $request->user()->hasRole($role)) {
+       abort(403);
+    }
+    
+    return $next($request);
+}
+```
+
+Don't forget to add the route middleware to your Kernel:
+
+```php
+// app/Http/Kernel.php
+protected $routeMiddleware = [
+    ...
+    'role' => \App\Http\Middleware\RoleMiddleware::class,
+    ...
+];
+```
+
+Now you can protect your routes using the middleware you just set up:
+
+```php
+Route::group(['middleware' => ['role:admin']], function () {
+    //
+});
+```
