@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['namespace' => 'L5Starter\PermissionManager\Http\Controllers\Admin', 'middleware' => ['web', 'auth']], function () {
+Route::group(['namespace' => 'L5Starter\PermissionManager\Http\Controllers\Admin', 'middleware' => ['web', 'role:admin']], function () {
     // Permissions
     Route::get('admin/permissions', ['as' => 'admin.permissions.index', 'uses' => 'PermissionController@index']);
     Route::post('admin/permissions', ['as' => 'admin.permissions.store', 'uses' => 'PermissionController@store']);
