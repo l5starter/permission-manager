@@ -55,6 +55,21 @@ Add menu in `resources/views/vendor/l5starter/admin/partials/sidebar.blade.php`
 </li>
 ```
 
+## Usage
+First add the `Spatie\Permission\Traits\HasRoles`-trait to your User model.
+
+```php
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
+
+class User extends Authenticatable
+{
+    use HasRoles;
+    
+    // ...
+}
+```
+
 ## Using a middleware
 The package doesn't contain a middleware to check permissions but it's very trivial to add this yourself.
 
