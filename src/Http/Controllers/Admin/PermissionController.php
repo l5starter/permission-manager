@@ -117,8 +117,11 @@ class PermissionController extends Controller
         ], $id);
 
         $roles = [];
-        foreach ($input['roles'] as $role) {
-            $roles[$role] = $role;
+
+        if (!empty($input['roles'])) {
+            foreach ($input['roles'] as $role) {
+                $roles[$role] = $role;
+            }
         }
 
         $permission->roles()->sync($roles);
