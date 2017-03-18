@@ -5,7 +5,7 @@
 In order to install Laravel 5, just add
 
 ``` php
-"l5starter/permission-manager": "5.3.x-dev"
+"l5starter/permission-manager": "5.4.x-dev"
 ```
 to your composer.json. Then run `composer install` or `composer update`.
 
@@ -65,7 +65,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable
 {
     use HasRoles;
-    
+
     // ...
 }
 ```
@@ -93,7 +93,7 @@ public function handle($request, Closure $next, $role)
     if (! $request->user()->hasRole($role)) {
        abort(403);
     }
-    
+
     return $next($request);
 }
 ```

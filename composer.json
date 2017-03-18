@@ -12,8 +12,8 @@
         }
     ],
     "require": {
-        "l5starter/core": "5.3.x-dev",
-        "spatie/laravel-permission": "^1.5"
+        "l5starter/core": "5.4.x-dev",
+        "spatie/laravel-permission": "^1.12"
     },
     "autoload": {
         "psr-4": {
