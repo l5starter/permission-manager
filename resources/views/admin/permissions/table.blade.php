@@ -1,7 +1,9 @@
 <table class="table" id="permissions-table">
     <thead>
-        <th>Name</th>
-        <th colspan="3">Action</th>
+		<tr>
+			<th>Name</th>
+			<th colspan="3">Action</th>
+		</tr>
     </thead>
     <tbody>
     @foreach($permissions as $permission)

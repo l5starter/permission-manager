@@ -1,7 +1,9 @@
 <table class="table" id="roles-table">
     <thead>
-        <th>Name</th>
-        <th colspan="3">Action</th>
+		<tr>
+			<th>Name</th>
+			<th colspan="3">Action</th>
+		</tr>
     </thead>
     <tbody>
     @foreach($roles as $role)
