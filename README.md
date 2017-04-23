@@ -45,7 +45,7 @@ Add menu in `resources/views/vendor/l5starter/admin/partials/sidebar.blade.php`
 ``` html
 <li class="{{ (Request::is('admin/roles*') ? 'active' : '') }}">
     <a href="{{ route('admin.roles.index') }}">
-        <i class="fa fa-cog"></i> <span>{{ trans('l5starter::general.roles') }}</span>
+        <i class="fa fa-users"></i> <span>{{ trans('l5starter::general.roles') }}</span>
     </a>
 </li>
 <li class="{{ (Request::is('admin/permissions*') ? 'active' : '') }}">
